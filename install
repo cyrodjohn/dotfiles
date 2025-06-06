@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# should output ~/.config/nvim
+DOTFILES="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+
+# ZSH
+# source the file.. i think
+ln -sf $DOTFILES/zsh/zshrc $HOME/.zshrc
+
+# Neovim
+rm -rf $HOME/.config/nvim
+ln -sf $DOTFILES/nvim $HOME/.config/nvim
+
+# TMUX
+ln -sf $DOTFILES/tmux/tmux.conf $HOME/.tmux.conf
+
