@@ -7,5 +7,7 @@ require 'config.autocommand'
 -- Configure Lazy
 require 'config.lazy'
 
+require 'custom.keymaps'
+
 -- NOTE Jess Archer Dotfiles
 require 'custom.archer'
