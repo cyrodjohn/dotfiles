@@ -18,7 +18,7 @@ return {
       center = {
         { icon = '  ', desc = 'Find file               ', key = 'leader s n', action = 'Telescope find_files' },
         { icon = '  ', desc = 'Recent files            ', key = 'leader leader', action = 'Telescope oldfiles' },
-        { icon = '  ', desc = 'Find Word               ', key = 'Space + g', action = 'Telescope live_grep' },
+        { icon = '  ', desc = 'Find Word               ', key = 'leader s g', action = 'Telescope grep_string' },
       },
       footer = {
         '',
