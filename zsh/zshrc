@@ -143,3 +143,4 @@ export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
 # Herd injected PHP 8.4 configuration.
 export HERD_PHP_84_INI_SCAN_DIR="/Users/cy/Library/Application Support/Herd/config/php/84/"
 export PATH='/Users/cy/.duckdb/cli/latest':$PATH
+alias love="~/Downloads/love.app/Contents/MacOS/love"
