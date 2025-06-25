@@ -22,6 +22,7 @@ return {
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
       { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
+      'nvim-telescope/telescope-live-grep-args.nvim',
     },
     config = function()
       -- Telescope is a fuzzy finder that comes with a lot of different things that
@@ -50,9 +51,14 @@ return {
         --  All the info you're looking for is in `:help telescope.setup()`
         --
         defaults = {
-          file_ignore_patterns = { 'vendor', 'node_modules', 'storage' },
+          file_ignore_patterns = { 'vendor', 'node_modules', 'storage', '.git' },
         },
-        -- pickers = {}
+        pickers = {
+          find_files = {
+            hidden = true,
+            no_ignore = true,
+          },
+        },
         extensions = {
           ['ui-select'] = {
             require('telescope.themes').get_dropdown(),
@@ -77,6 +83,24 @@ return {
       vim.keymap.set('n', '<leader>s.', builtin.oldfiles, { desc = '[S]earch Recent Files ("." for repeat)' })
       vim.keymap.set('n', '<leader><leader>', builtin.buffers, { desc = '[ ] Find existing buffers' })
 
+      -- override the live grep from Jess Archer
+      -- vim.keymap.set('n', '<leader>sg', function()
+      --   require('telescope').extensions.live_grep_args.live_grep_args {
+      --     prompt_title = 'Grep Project',
+      --     vimgrep_arguments = {
+      --       'rg',
+      --       '--hidden',
+      --       '-L',
+      --       '--color=never',
+      --       '--sort=path',
+      --       '--no-heading',
+      --       '--with-filename',
+      --       '--line-number',
+      --       '--column',
+      --       '--smart-case',
+      --     },
+      --   }
+      -- end, { desc = '[S]earch by [G]rep' })
       -- Slightly advanced example of overriding default behavior and theme
       vim.keymap.set('n', '<leader>/', function()
         -- You can pass additional configuration to Telescope to change the theme, layout, etc.

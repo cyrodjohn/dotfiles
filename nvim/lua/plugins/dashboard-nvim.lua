@@ -1,5 +1,4 @@
 return {
-  enabled = true,
   'glepnir/dashboard-nvim',
   opts = {
     theme = 'doom',
