@@ -222,7 +222,7 @@ return {
         tailwindcss = {},
         phpactor = {
           capabilities = capabilities,
-          on_attach = function(client, bufnr)
+          on_init = function(client, bufnr)
             client.server_capabilities.implementationProvider = false
             client.server_capabilities.referencesProvider = false
             client.server_capabilities.renameProvider = false
