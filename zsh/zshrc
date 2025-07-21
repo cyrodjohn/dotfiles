@@ -150,15 +150,14 @@ alias love="~/Downloads/love.app/Contents/MacOS/love"
 # Focus timers from BashBunni
 alias work="timer 60m -f && terminal-notifier -message 'Pomodoro'\
         -title 'Work Timer is up! Take a Break 😊'\
-        -appIcon '~/Pictures/Picture 1.jpg'\
         -sound Crystal"
 
-alias focus="timer 20m -f && terminal-notifier -message 'Pomodoro'\
+alias focus="timer 60m -f && terminal-notifier -message 'Pomodoro'\
         -title 'Focus Timer is up! Take a Break 😊'\
         -appIcon '~/Pictures/Picture 1.jpg'\
         -sound Crystal"
 
-alias rest="timer 15m -f && terminal-notifier -message 'Pomodoro'\
+alias rest="timer 25m -f && terminal-notifier -message 'Pomodoro'\
         -title 'Rest Timer is up! Time to Work 💪'\
         -appIcon '~/Pictures/Picture 1.jpg'\
         -sound Crystal"
@@ -166,3 +165,6 @@ alias rest="timer 15m -f && terminal-notifier -message 'Pomodoro'\
 # Better ls
 alias ls=eza
 
+
+. "$HOME/.local/bin/env"
+eval "$(~/.local/bin/mise activate)"
