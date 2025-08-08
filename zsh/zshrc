@@ -164,7 +164,8 @@ alias rest="timer 25m -f && terminal-notifier -message 'Pomodoro'\
 
 # Better ls
 alias ls=eza
-
+alias cd=z
 
 . "$HOME/.local/bin/env"
 eval "$(~/.local/bin/mise activate)"
+eval "$(zoxide init zsh)"

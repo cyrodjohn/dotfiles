@@ -5,5 +5,6 @@ return {
   keys = {
     { '<Leader>pm', ':PhpactorContextMenu<CR>' },
     { '<Leader>pn', ':PhpactorClassNew<CR>' },
+    { '<Leader>pi', ':PhpactorImportClass<CR>' },
   },
 }
