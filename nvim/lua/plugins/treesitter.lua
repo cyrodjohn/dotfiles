@@ -1,11 +1,12 @@
 return {
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
+    branch = 'main',
     build = ':TSUpdate',
     dependencies = {
       'nvim-treesitter/nvim-treesitter-textobjects',
     },
-    main = 'nvim-treesitter.configs',
+    main = 'nvim-treesitter.config',
     opts = {
       ensure_installed = 'all',
       auto_install = true,
