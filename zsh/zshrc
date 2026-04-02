@@ -176,3 +176,5 @@ export HERD_PHP_85_INI_SCAN_DIR="/Users/cy/Library/Application Support/Herd/conf
 # opencode
 export PATH=/Users/cy/.opencode/bin:$PATH
 export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
+
+eval "$(starship init zsh)"
